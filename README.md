@@ -1,14 +1,25 @@
-# mcp-ebird
+# @pipeworx/ebird
 
-eBird MCP — Cornell Lab of Ornithology citizen-science bird observations
+eBird MCP — Cornell Lab bird sightings.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `nearby_observations` | Recent observations within a radius of a lat/lon. Useful for "what birds are around here right now. |
+- `recent_observations(region_code, species_code?, back?, max_results?, include_provisional?)`
+- `recent_notable(region_code, back?, max_results?, detail?)`
+- `nearby_observations(latitude, longitude, dist_km?, back?, max_results?, species_code?)`
+- `find_species(query)`
+- `list_subregions(region_type, parent_region_code?)`
+
+## Auth
+
+- **Platform key:** gateway env `PLATFORM_EBIRD_KEY`.
+- **BYO:** `?_apiKey=<token>` after registering at https://ebird.org/api/keygen (free).
+
+## Data source
+
+`https://api.ebird.org/v2` — header `X-eBirdApiToken`.
 
 ## Quick Start
 
@@ -24,7 +35,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -48,7 +59,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
