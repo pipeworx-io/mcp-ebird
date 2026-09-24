@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/ebird",
   "title": "Ebird",
   "description": "eBird MCP — Cornell Lab of Ornithology citizen-science bird observations",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/ebird",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-ebird",
